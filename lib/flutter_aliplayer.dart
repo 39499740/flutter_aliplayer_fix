@@ -585,9 +585,9 @@ class FlutterAliplayer {
         break;
       case "onInfo":
         if (player.onInfo != null) {
-          int infoCode = event['infoCode'];
-          int extraValue = event['extraValue'];
-          String extraMsg = event['extraMsg'];
+          int infoCode = event['infoCode']??"";
+          int extraValue = event['extraValue']??"";
+          String extraMsg = event['extraMsg']??"";
           player.onInfo!(infoCode, extraValue, extraMsg, playerId);
         }
         break;
